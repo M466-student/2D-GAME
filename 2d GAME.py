@@ -1,14 +1,17 @@
 # import pygame module in this program
 import pygame
+from pygame import mixer
 
 # activate the pygame library .
 # initiate pygame and give permission
 # to use pygame's functionality.
 pygame.init()
-
 # create the display surface object
 # of specific dimension..e(500, 500).
 win = pygame.display.set_mode((500, 500))
+#soundtrack
+mixer.music.load("backsound.wav")
+mixer.music.play(-2)
 #background
 background = pygame.image.load("B.png")
 
@@ -31,7 +34,7 @@ run = True
 # infinite loop
 while run:
     # creates time delay of 10ms
-    pygame.time.delay(40)
+    pygame.time.delay(80)
 
     # iterate over the list of Event objects
     # that was returned by pygame.event.get() method.
